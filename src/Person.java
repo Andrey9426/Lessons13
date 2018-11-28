@@ -1,4 +1,7 @@
-public class Person{
+public class Person implements Comparable <Person>{
+
+
+
     private int id;
     private String firstName;
     private String lestName;
@@ -38,5 +41,24 @@ public class Person{
 
         System.out.println(p1.equals(p2));
         System.out.println(p1.equals(p3));
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lestName='" + lestName + '\'' +
+                '}';
+    }
+    @Override
+
+    public int compareTo(Person o){
+        if(id> o.id){
+            return 1;                    // Сортировка id
+        }if(id <o.id){
+            return -1;
+        }return 0;
+
     }
 }
