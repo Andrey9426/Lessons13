@@ -1,7 +1,6 @@
 public class Person implements Comparable <Person>{
 
 
-
     private int id;
     private String firstName;
     private String lestName;
